@@ -1,12 +1,20 @@
+#{
+  Alina debug changelog |Orignal file by America|
+  - implemented cell2mat on line 11 in order to convert cell array to numerical array so it may be processed later as numerical data
+  - commented out evaluation of the testVal on lines 18 to 25 due to it not working and refusing to close the errorbox requiring task manager to close application
+  #}
+
 
 %this function sets up a dialouge box so that the user can input
 %values that are assigned to the varialbes of the main script
 
 function verifiedInput = inputLoop()
-  inputStorage = inputBox();
+  inputStorage = cell2mat(inputBox());
+  disp(inputStorage);
   testVal = numCheck(inputStorage);
 
   %this is the loop to verify if it is all #'s and to ask for input again
+#{
   while testVal ~= true
 
     %check which error message veichle is appropriate
@@ -15,8 +23,8 @@ function verifiedInput = inputLoop()
     testVal = numCheck(inputStorage);
 
   endwhile
-
-  verfiedInput = inputStorage;
+#}
+  verifiedInput = inputStorage;
 end
 
 %this is a utility function that will generate the input
