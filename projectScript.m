@@ -34,5 +34,8 @@ fprintf(fid, '---------------- \n\n');
 %read in the matrix, this may need checking
 writematrix(chessBoard,fid,'Delimiter','tab');
 
-%other lines that may be needed can be added by copying/altering fprintf lns
+%read in the postion array
+fprintf ('\n');
+fprintf('queens placed at: ');
+writematrix(queenPositions)
 
