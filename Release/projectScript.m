@@ -13,15 +13,16 @@ Short final debug log by Alina
   - changed 29 to use queenNum rather than chessboard in MN input to fix dimension error
   - added lines 40 and 41 to generate queen position array for output
   - lines 50 and 51 now output to the output file rather than terminal
+  - transpose array on line 25 to fix dimension mismatch error
 #}
 
 workingArray = str2num(inputLoop());
 
 %variable assignment using the
 queenNum = workingArray(1);
-starCoor = workingArray([2 3]); %check this to be sure
+startCoor = workingArray([2 3]); %check this to be sure
 chessBoard = ones(size(queenNum));
-
+startCoor = transpose(startCoor);
 
 
 %depending on the structure of the final script, ideally
@@ -50,4 +51,3 @@ fprintf (fid,'\n');
 fprintf(fid,'queens placed at: \n');
 csvwrite(fid,queenPositions);
 fclose(fid);
-
