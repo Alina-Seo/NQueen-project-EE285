@@ -7,6 +7,14 @@
 %b/c this is only a testing field, feel free to move the lines to the final
 %files or add stuff to turn it into the final file
 
+#{
+Short final debug log by Alina
+  -fixed typing and dimension errors by adding str2num line 15, size() line 20
+  - changed 29 to use queenNum rather than chessboard in MN input to fix dimension error
+  - added lines 40 and 41 to generate queen position array for output
+  - lines 50 and 51 now output to the output file rather than terminal
+#}
+
 workingArray = str2num(inputLoop());
 
 %variable assignment using the
