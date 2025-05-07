@@ -16,3 +16,7 @@ the stages are as follows
 3 - subtractive elimiation
 
 program loops between stages 2 and 3 before returning to 1 after N times
+
+TO DOWNLOAD AND USE
+
+go to release folder, and follow readme in folder
